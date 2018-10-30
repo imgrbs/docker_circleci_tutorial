@@ -5,7 +5,7 @@ jobs:
     steps:
       - checkout
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker image build -t dscythe/docker_tutorial
+      - run: docker image build -t dscythe/docker_tutorial .
       - run: docker push dscythe/docker_tutorial
   deploy:
     machine: true
